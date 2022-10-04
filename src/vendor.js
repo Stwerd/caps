@@ -9,9 +9,15 @@ function createPackage (storeName) {
     "customer": "Jackson",
     "address": "1123 Fake Street"
   }
-  events.emit('pickup', payload);
   events.emit('global', {event:'pickup', payload:payload})
-  events.on('delivered', (name) => console.log(`Thank you, ${payload.customer}`));
+  events.emit('pickup', payload);
 }
 
-module.exports = createPackage;
+function handleDelivered (payload) {
+ console.log(`Thank you, ${payload.customer}`)
+}
+
+module.exports = {
+  createPackage,
+  handleDelivered,
+}
