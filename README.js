@@ -1,6 +1,6 @@
 ## Everything Events
 
-[Uml](uml.png)
+![UML](uml.png)
 
 Refer to the CAPS System Overview for a complete review of the application, including Business and Technical requirements along with the development roadmap.
 Phase 1 Requirements
